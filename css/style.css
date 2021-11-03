@@ -132,3 +132,27 @@ header button span {
     margin-right: 20px;
     border-radius: 30px;
 }
+/* main-content */
+.categories {
+    margin-top: 80px;
+}
+
+.categories ul {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories ul li {
+    margin-right: 2.5%;
+    height: 100%;
+    display: flex;
+}
+
+.categories ul li  button {
+    color: var(--light-gray);
+    font-weight: 700;
+    font-size: 0.78em;
+    text-transform: uppercase;
+}
