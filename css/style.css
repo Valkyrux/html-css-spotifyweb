@@ -132,7 +132,7 @@ header button span {
     margin-right: 20px;
     border-radius: 30px;
 }
-/* main-content */
+/* main nav */
 .categories {
     margin-top: 80px;
 }
@@ -145,7 +145,7 @@ header button span {
 }
 
 .categories ul li {
-    margin-right: 2.5%;
+    margin-right: 2%;
     height: 100%;
     display: flex;
 }
@@ -155,4 +155,46 @@ header button span {
     font-weight: 700;
     font-size: 0.78em;
     text-transform: uppercase;
+}
+/* main content */
+.row {
+    padding: 20px;
+}
+
+.row h2 {
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.row ul {
+    display: flex;
+}
+
+.row ul li {
+    width: calc((100% / 6) - (100px / 6));
+    margin: 10px;
+    text-align: center;
+}
+/* align gallery items with the others */
+.row ul li:first-child {
+    margin-left: 0;
+}
+.row ul li:last-child {
+    margin-right: 0;
+}
+
+.row ul li img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.row ul li h3 {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.row p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-gray);
 }
