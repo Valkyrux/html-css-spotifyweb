@@ -2,7 +2,7 @@
 :root {
     --night-blue: #141922;
     --gray: #282828;
-
+    --light-gray: #a3a3a3;
 }
 /* basic layout */
 * {
@@ -14,6 +14,16 @@
 html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0 solid transparent;
 }
 
 .container {
@@ -24,17 +34,18 @@ html {
 }
 
 .container>header {
-    width: 210px;
+    width: 220px;
     height: calc(100% - 80px);
     background-color: black;
+    color: var(--light-gray);
+    padding: 20px;
 }
 
 .container>main {
-    width: calc(100% - 210px);
+    width: calc(100% - 220px);
     height: calc(100% - 80px);
     background-color: var(--night-blue);
     overflow: auto;
-    position: relative;
 }
 
 .container>footer {
@@ -47,10 +58,77 @@ html {
 }
 
 .upgrade {
-    width: 100%;
+    width: calc(100% - 220px);
     height: 80px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+}
+/* header style */
+header .logo {
+    width: 70%;
+    object-fit: contain;
+}
+
+.main-menu {
+    margin: 20px 0;
+}
+
+header button {
+    color: var(--light-gray);
+    font-size: 1.5em;
+    margin: 2% 0;
+}
+
+header button>*  {
+    vertical-align: middle;
+}
+/* text on main buttons  */
+header button span {
+    font-size: 0.5em;
+    font-weight: 700;
+}
+/* align horizontal text by a fix width for the icons */
+.main-menu button i {
+    width: 30px;
+}
+/* playlist */
+.playlists h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+}
+
+.playlists button i {
+    font-size: 1.8em;
+}
+
+.playlists button span {
+    font-size: 1rem;
+}
+
+.playlist {
+    font-size: 0.56rem;
+    margin: 10px 0;
+}
+
+.playlists .playlist button {
+    font-weight: 700;
+}
+/* main upgrade */
+.upgrade button {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid white;
+    margin-right: 20px;
+    border-radius: 30px;
 }
