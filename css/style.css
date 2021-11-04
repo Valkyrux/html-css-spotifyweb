@@ -74,16 +74,17 @@ button {
 header .logo {
     width: 70%;
     object-fit: contain;
+    height: calc(80px - 20px);
 }
-
+/* main-menu */
 .main-menu {
-    margin: 20px 0;
+    height: 130px;
 }
 
 header button {
     color: var(--light-gray);
     font-size: 1.5em;
-    margin: 2% 0;
+    margin: 5px 0;
 }
 
 header button>*  {
@@ -99,16 +100,21 @@ header button span {
     width: 25px;
     filter: opacity(0.7);
 }
-/* playlistDALAVORARE */
+/* playlist */
+.playlists {
+    /* 100%- header - mainmenu - footer +2*padding */
+    height: calc(100% - 80px - 130px - 80px + 20px);
+}
+
 .playlists ul {
+    height: calc(100% - 25px - 40px - 10px);
     overflow: auto;
-    height: calc(100% - 76.6px);
 }
 .playlists h2 {
     color: white;
     text-transform: uppercase;
     font-size: 0.85em;
-    margin-bottom: 10px;
+    height: 25px;
 }
 
 .playlists button span:first-child {
@@ -136,11 +142,10 @@ header button span {
 }
 /* user */
 .user-area {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 80px;
     width: 100%;
     background-color: black;
+    position: relative;
 }
 
 .user-area img {
