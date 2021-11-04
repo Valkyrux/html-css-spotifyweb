@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/style.css">
         <title>Spotify Web</title>
@@ -16,16 +16,18 @@
         <div class="container">
             <header>
                 <img class="logo" src="img/logo.svg" alt="">
+                
                 <nav class="main-menu">
                     <ul>
-                        <li><button><i class="fas fa-home"></i> <span>Home</span></button></li>
-                        <li><button><i class="fas fa-search"></i> <span>Cerca</span></button></li>
-                        <li><button><i class="fas fa-book-open"></i> <span>La tua libreria</span></button></li>
+                        <li><button><img src="img/home.svg" alt=""> <span>Home</span></button></li>
+                        <li><button><img src="img/search.svg" alt=""> <span>Cerca</span></button></li>
+                        <li><button><img src="img/libreria.svg" alt=""> <span>La tua libreria</span></button></li>
                     </ul>
                 </nav>
+                
                 <nav class="playlists">
                     <h2>Playlist</h2>
-                    <button class="create-playlist"><i class="fas fa-plus-square"></i> <span>Crea Playlist</span></button>
+                    <button class="create-playlist"><span>&plus;</span> <span>Crea Playlist</span></button>
                     <ul>
                         <li class="playlist"><button>Nome Playlist</button></li>
                         <li class="playlist"><button>Nome Playlist</button></li>
@@ -36,6 +38,13 @@
                         <li class="playlist"><button>Nome Playlist</button></li>
                     </ul>
                 </nav>
+
+                <nav class="user-area">
+                    <button class="install"> <img src="img/download.svg" alt=""> <span>Installa app</span></button>
+                    <hr>
+                    <button class="user"><img src="img/profile.svg" alt=""> <span>John Doe</span></button>
+                </nav>
+
             </header>
             <main>
                 <nav class="upgrade">
@@ -98,15 +107,13 @@
                     <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
                     <ul class="gallery">
                         <li>
-                            <img src="img/metal_lifting.jpg" alt="">
-                            <h3>Haevy Metal</h3>
-                            <p>Subtitle</p>
+                            <img src="img/radar.jpeg" alt="">
+                            <h3>Release Radar</h3>
                         </li>
 
                         <li>
-                            <img src="img/metal_lifting.jpg" alt="">
-                            <h3>Haevy Metal</h3>
-                            <p>Subtitle</p>
+                            <img src="img/mixdaily.jpeg" alt="">
+                            <h3>Daily Mix 1</h3>
                         </li>
                     </ul>
                 </section>
@@ -115,7 +122,15 @@
                     <h2>Artisti pi&uacute; popolari</h2>
                     <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
                     <ul class="gallery">
+                        <li>
+                            <img src="img/youg.jpeg" alt="">
+                            <h3>Lana Del Ray</h3>
+                        </li>
 
+                        <li>
+                            <img src="img/einaudi.jpeg" alt="">
+                            <h3>Ludovico Einaudi</h3>
+                        </li>
                     </ul>
                 </section>
 

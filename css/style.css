@@ -39,6 +39,7 @@ button {
     background-color: black;
     color: var(--light-gray);
     padding: 20px;
+    position: relative;
 }
 
 .container>main {
@@ -90,14 +91,19 @@ header button>*  {
 }
 /* text on main buttons  */
 header button span {
-    font-size: 0.5em;
-    font-weight: 700;
+    font-size: 0.6em;
+    font-weight: 600;
 }
 /* align horizontal text by a fix width for the icons */
-.main-menu button i {
-    width: 30px;
+.main-menu button img {
+    width: 25px;
+    filter: opacity(0.7);
 }
-/* playlist */
+/* playlistDALAVORARE */
+.playlists ul {
+    overflow: auto;
+    height: calc(100% - 76.6px);
+}
 .playlists h2 {
     color: white;
     text-transform: uppercase;
@@ -105,11 +111,18 @@ header button span {
     margin-bottom: 10px;
 }
 
-.playlists button i {
-    font-size: 1.8em;
+.playlists button span:first-child {
+    width: 40px;
+    height: 40px;
+    color: black;
+    background-color: var(--light-gray);
+    font-size: 1.4em;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 100%;
 }
 
-.playlists button span {
+.playlists button span:nth-child(2) {
     font-size: 1rem;
 }
 
@@ -121,6 +134,20 @@ header button span {
 .playlists .playlist button {
     font-weight: 700;
 }
+/* user */
+.user-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+}
+
+.user-area img {
+    width: 20px;
+    object-fit: contain;
+    filter: opacity(0.5);
+}
 /* main upgrade */
 .upgrade button {
     font-size: 0.8rem;
@@ -129,7 +156,7 @@ header button span {
     text-transform: uppercase;
     padding: 10px 30px;
     border: 1px solid white;
-    margin-right: 20px;
+    margin-right: 30px;
     border-radius: 30px;
 }
 /* main nav */
@@ -197,4 +224,18 @@ header button span {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--light-gray);
+}
+/* 2nd and 3rd row */
+.for-you h2,
+.popular h2 {
+    margin-bottom: 10px;
+}
+
+.for-you>p,
+.popular>p {
+    margin-bottom: 20px;
+}
+/* 3rd row circle */
+.popular li img {
+    border-radius: 50%;
 }
