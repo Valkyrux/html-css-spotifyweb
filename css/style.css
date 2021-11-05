@@ -39,8 +39,6 @@ button {
     height: calc(100% - 80px);
     background-color: black;
     color: var(--light-gray);
-    padding: 20px;
-    padding-bottom: 5px;
     position: relative;
 }
 
@@ -75,31 +73,34 @@ button {
 /* header style */
 header .logo {
     width: 70%;
+    height: 80px;
+    padding-top: 20px;
+    padding-left: 20px;
     object-fit: contain;
     object-position: top;
-    height: calc(80px - 20px);
 }
 /* main-menu */
 .main-menu {
     height: 130px;
+    padding-left: 20px;
 }
 
-header button {
+header a {
     color: var(--light-gray);
     font-size: 1.5em;
     margin: 5px 0;
 }
 
-header button>*  {
+header a>*  {
     vertical-align: middle;
 }
 /* text on main buttons  */
-header button span {
+header a span {
     font-size: 0.6em;
     font-weight: 600;
 }
 /* align horizontal text by a fix width for the icons */
-.main-menu button img {
+.main-menu a img {
     width: 25px;
     filter: opacity(0.7);
 }
@@ -107,6 +108,7 @@ header button span {
 .playlists {
     /* 100%- header - mainmenu - footer  */
     height: calc(100% - 60px - 130px - 70px);
+    padding-left: 20px;
 }
 
 .playlists ul {
@@ -146,6 +148,7 @@ header button span {
 }
 /* user */
 .user-area {
+    padding-left: 20px;
     height: 70px;
     width: 100%;
     background-color: black;
