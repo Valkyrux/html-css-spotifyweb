@@ -30,6 +30,8 @@ button {
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--light-gray);
 }
 
 .container {
@@ -43,7 +45,6 @@ a {
     width: 220px;
     height: calc(100% - 80px);
     background-color: black;
-    color: var(--light-gray);
     position: relative;
 }
 
@@ -365,21 +366,38 @@ footer .player {
 .track {
     display: flex;
     align-items: center;
-    font-size: 0.7em;
-    margin: 0 10% 0 2%;
+    font-size: 0.6em;
+    margin: 0 12% 0 2%;
     color: white;
 }
 
+.track h3 a{
+    color: white;
+}
+
+
+.track p a:hover,
+.track p a:focus,
+.track p a:active {
+    color: white;
+    text-decoration: underline;
+}
+
 .track img {
-    width: 50px;
+    width: 40px;
     object-fit: contain;
-    margin: 15px;
+    margin: 20px 10px;
 }
 
 .actions label:first-child {
     margin-right: 10px;
 }
 /* input on actions */
+.actions label:hover,
+.actions label:focus {
+    color: white;
+}
+
 .actions input {
     width: 0;
     height: 0;
@@ -416,9 +434,14 @@ footer .player {
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    line-height: 1em;
-    padding-left: 0.13em;
     margin: 0 3%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .play:hover {
+    transform: scale(1.2);
 }
 /* player-bar */
 .player-bar {
@@ -443,6 +466,7 @@ footer .player {
     height: 3px;
     background-color: var(--light-gray);
     position: relative;
+    cursor: pointer;
 }
 
 .current-bar {
@@ -451,6 +475,26 @@ footer .player {
     position: absolute;
     left: 0;
     background-color: white;
+}
+
+.total-bar:hover .current-bar, 
+.total-bar:focus .current-bar, 
+.total-bar:active .current-bar {
+    background-color: var(--evidence);
+}
+
+.total-bar:hover .current-bar::after, 
+.total-bar:focus .current-bar::after, 
+.total-bar:active .current-bar::after {
+    content: '';
+    position: absolute; 
+    top: -2px;
+    right: -2px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: white;
+    display: block;
 }
 /* settings */
 .settings {
@@ -461,6 +505,10 @@ footer .player {
 .total-bar.vol {
     width: 30%;
     margin-right: 4%;
+}
+
+.current-bar.vol {
+    width: 60%;
 }
 
 .settings button {
