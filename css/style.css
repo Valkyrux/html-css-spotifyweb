@@ -331,15 +331,15 @@ header a span {
 
 .row ul li:hover .img-container::after {
     content: '\25B6';
-    font-size: 2.4em;
+    font-size: 2.2em;
     padding-left: 5px;
-    height: 50px;
-    width: 45px;
+    height: 45px;
+    width: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid white;
+    border: 4px solid white;
     border-radius: 50%;
 }
 
