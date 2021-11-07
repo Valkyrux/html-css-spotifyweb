@@ -79,15 +79,15 @@ a {
 
 @media screen and (max-width: 600px) {
     .container>header {
-        width: 80px;
+        width: 60px;
     }
     
     .container>main {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
     .upgrade {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
     header a span {
@@ -103,6 +103,27 @@ header .logo {
     object-fit: contain;
     object-position: top;
 }
+
+header .logo-small {
+    display: none;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    header .logo {
+        display: none;
+    }
+    
+    header .logo-small {
+        display: block;
+        width: 50%;
+        margin: auto;
+        height: 60px;
+        object-fit: contain;
+    }
+    
+}
+
 /* main-menu */
 .main-menu {
     height: 8em;
@@ -150,6 +171,29 @@ header a span {
     color: white;
     border-left: 2px solid var(--evidence);
     padding-left: 18px;
+}
+
+@media screen and (max-width:600px) {
+    .main-menu {
+        height: calc(8em + 20px);
+    }
+    
+    .main-menu a {
+        padding-left: 0;
+        text-align: center;
+        display: block;
+    }
+    
+    .main-menu a img {
+        width: 30px;
+        text-align: center;
+    }
+
+    .main-menu a.active{
+        border-left: 0px solid transparent;
+        padding-left: 0px;
+    }
+    
 }
 /* playlist */
 .playlists {
@@ -229,6 +273,13 @@ header a span {
     border: 0;
     border-top: 1px solid var(--light-gray);
 }
+
+@media screen and (max-width:600px) {
+    .user-area hr {
+        border-top: 0px solid transparent;
+    }
+}
+
 /* install app */
 .user-area .install {
     font-size: 1.2em;
@@ -269,6 +320,13 @@ header a span {
     color: white;
 }
  
+@media screen and (max-width:500px) {
+    .upgrade a {
+        font-size: 0.5rem;
+        padding: 5px 10px;
+    }
+}
+
 .upgrade a:hover,
 .upgrade a:active,
 .upgrade a:focus {
@@ -383,6 +441,14 @@ header a span {
     }
 
     .row ul li:nth-child(2n + 0) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .row ul li {
+        width: 100%;
+        margin-left: 0;
         margin-right: 0;
     }
 }
@@ -528,6 +594,7 @@ footer .player {
     border-radius: 50%;
     height: 30px;
     width: 30px;
+    padding-left: 0.1em;
     margin: 0 2%;
     display: inline-flex;
     justify-content: center;
@@ -601,12 +668,6 @@ footer .player {
     margin-right: 4%;
 }
 
-@media screen and (max-width: 700px) {
-    .total-bar.vol {
-        min-width: 80px;
-    }
-}
-
 .current-bar.vol {
     width: 60%;
 }
@@ -614,4 +675,44 @@ footer .player {
 .settings button {
     color: white;
     margin: 0 5%
+}
+
+
+@media screen and (max-width:600px) {
+    .track img {
+        width: 30px;
+        margin: 25px 7px;
+    }
+    
+    .total-bar {
+        width: 35%;
+    }
+
+    .total-bar.vol {
+        width: 60%;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .player .play {
+        width: 23px;
+        height: 23px;
+    }
+    
+    footer,
+    footer .settings button i {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .actions * {
+        display: none;
+    }
+    
+    .settings button:first-child,
+    .settings button:nth-child(2) {
+        display: none;
+    }
 }
